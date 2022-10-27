@@ -1,10 +1,15 @@
-print('*를 출력합니다.')
-n = int(input('몇 개를 출력할까요?: '))
-w = int(input('몇 개마다 줄바꿈할까요?: '))
+print('1부터 n까지 정수의 합을 구합니다.')
 
-for _ in range(n // w):
-  print('*' * w)
+while True:
+  n = int(input('값을 입력하세요.: '))
+  if n > 0:
+    break
 
-rest = n % w
-if rest:
-  print('*' * rest)
+sum = 0
+i = 1
+
+for i in range(1, n + 1):
+  sum += i
+  i += 1
+
+print(f'1부터 {n}까지 정수의 합은 {sum}입니다.')
